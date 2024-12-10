@@ -1,19 +1,32 @@
-This could be the architecture:
+This could be the File Structure:
+
+![Demo](image.png)
+
 ```
-pages/
-├── index.js (Main entry for the Trello-like app)
-components/
-├── Header/
-│   ├── Header.js
-│   └── Header.module.css (Optional for styling)
-├── Sidebar/
-│   ├── Sidebar.js
-│   └── Sidebar.module.css
-├── Board/
-│   ├── Board.js
-│   ├── Column.js
-│   ├── Card.js
-│   └── Board.module.css
-styles/
-├── globals.css
+src/
+  components/
+    AppContainer.jsx
+    Header/
+      Header.jsx
+    Board/
+      BoardContainer.jsx
+      List.jsx
+      Card.jsx
+      CardLabel.jsx
+      Checklist.jsx
+      CardTooltip.jsx
+    Sidebar/
+      Sidebar.jsx
+    Footer/
+      Footer.jsx
+  styles/
+    tailwind.config.js
+    board.css
+  utils/
+    dataFetching.js
+    formatDate.js
+  assets/
+    icons/
+    images/
+
 ```

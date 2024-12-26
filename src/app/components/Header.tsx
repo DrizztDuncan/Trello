@@ -13,7 +13,7 @@ export default function Header() {
           ></path>
         </svg>
         <div className="block w-[75px] h-[15px] bg-[url('https://trello.com/assets/d947df93bc055849898e.gif')] bg-no-repeat bg-center bg-contain m-1"></div>
-        <Menu className="mx-3">
+        <Menu as="div" className="">
           <MenuButton className="flex">
             Workspaces
             <span>

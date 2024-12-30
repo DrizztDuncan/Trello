@@ -6,6 +6,9 @@
   --background: rgb(29, 33, 37);
   --foreground: rgb(182, 194, 207);
   --font-color: #171717;
+  *:focus {
+    outline: none;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -23,4 +26,8 @@ body {
 
 nav button {
   @apply p-1 rounded-sm;
+}
+
+header div {
+  @apply align-middle;
 }

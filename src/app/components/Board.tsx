@@ -1,3 +1,11 @@
+import BoardHeader from "./BoardHeader";
+import BoardBody from "./BoardBody";
+
 export default function Board() {
-  return <>Board</>;
+  return (
+    <div className="w-full">
+      <BoardHeader />
+      <BoardBody />
+    </div>
+  );
 }

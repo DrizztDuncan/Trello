@@ -1,6 +1,13 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 export default function Header() {
+  const headerBtn = [
+    { workspaces: "Workspaces", content: [] },
+    { recent: "Recent", content: [] },
+    { starred: "Starred", content: [] },
+    { templates: "Templates", content: [] },
+  ];
+
   return (
     <header className="flex p-2 items-center justify-between shadow-md border-b border-gray-200">
       {/* Navbar titles */}
@@ -102,7 +109,6 @@ export default function Header() {
 
         <Menu>
           <MenuButton className="flex">
-            Templates
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

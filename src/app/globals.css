@@ -28,10 +28,6 @@ nav button {
   @apply p-1 rounded-sm;
 }
 
-header div svg {
-  @apply my-auto;
-}
-
 .card {
   @apply m-1;
 }

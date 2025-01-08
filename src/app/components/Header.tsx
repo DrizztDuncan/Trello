@@ -1,11 +1,22 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+} from "@headlessui/react";
 
 export default function Header() {
   const headerBtn = [
-    { workspaces: "Workspaces", content: [] },
-    { recent: "Recent", content: [] },
-    { starred: "Starred", content: [] },
-    { templates: "Templates", content: [] },
+    {
+      workspaces: "Workspaces",
+      content: ["Your Workspaces", "Duncan's Workspace"],
+    },
+    { recent: "Recent", content: ["Basic Board"] },
+    { starred: "Starred", content: ["Starred Board"] },
+    { templates: "Templates", content: ["Top templates"] },
   ];
 
   return (
@@ -20,7 +31,26 @@ export default function Header() {
           ></path>
         </svg>
         <div className="block m-2 w-[75px] h-[15px] bg-[url('https://trello.com/assets/d947df93bc055849898e.gif')] bg-no-repeat bg-center bg-contain"></div>
-        <Menu>
+
+        {headerBtn.map((item, index) => (
+          <Popover className="relative" key={index}>
+            <PopoverButton>
+              {Object.values(item)[0]}{" "}
+              {/* This will display the button text, e.g., "Workspaces", "Recent" */}
+            </PopoverButton>
+            <PopoverPanel anchor="bottom" className="flex flex-col">
+              {item.content.map((link, linkIndex) => (
+                <a
+                  key={linkIndex}
+                  href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
+                >
+                  {link}
+                </a>
+              ))}
+            </PopoverPanel>
+          </Popover>
+        ))}
+        {/* <Menu>
           <MenuButton className="flex">
             Workspaces
             <span>
@@ -133,7 +163,7 @@ export default function Header() {
               </a>
             </MenuItem>
           </MenuItems>
-        </Menu>
+        </Menu> */}
         {/* Responsive Menu button */}
         <Menu>
           <MenuButton className="hidden">

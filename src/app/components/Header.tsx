@@ -30,10 +30,9 @@ export default function Header() {
             id="Shape"
           ></path>
         </svg>
-        <div className="block m-2 w-[75px] h-[15px] bg-[url('https://trello.com/assets/d947df93bc055849898e.gif')] bg-no-repeat bg-center bg-contain"></div>
-
+        <div className="m-2 w-[75px] h-[15px] bg-[url('https://trello.com/assets/d947df93bc055849898e.gif')] bg-no-repeat bg-center bg-contain"></div>
         {headerBtn.map((item, index) => (
-          <Popover className="relative" key={index}>
+          <Popover className="flex" key={index}>
             <PopoverButton>
               {Object.values(item)[0]}{" "}
               {/* This will display the button text, e.g., "Workspaces", "Recent" */}
@@ -48,6 +47,22 @@ export default function Header() {
                 </a>
               ))}
             </PopoverPanel>
+            <span className="m-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
           </Popover>
         ))}
         {/* <Menu>

@@ -36,18 +36,20 @@ export default function BoardBody() {
   ];
 
   const cardList = cardData.map((card) => (
-    <>
-      <div key={card.cardItem} className="card">
+    <div key={card.cardItem} className="flex">
+      <div key={card.cardItem} className="">
         {card.cardItem}
       </div>
       {card.icon}
-    </>
+    </div>
   ));
 
   return (
-    <div className="bg-[#004080]">
-      <div className="flex w-11/12 h-screen justify-between items-center mx-auto">
-        {cardList}
+    <div className="bg-[#004080] h-screen">
+      <div>
+        <div className="flex w-11/12 justify-between items-center mx-auto">
+          {cardList}
+        </div>
       </div>
     </div>
   );

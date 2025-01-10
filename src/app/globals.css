@@ -27,7 +27,3 @@ body {
 nav button {
   @apply p-1 rounded-sm;
 }
-
-.card {
-  @apply m-1;
-}

@@ -10,6 +10,14 @@ export default function BoardBody() {
           ></path>
         </svg>
       ),
+      cards: [
+        { title: "This is a card! 👋 Select it to see its card back." },
+        { title: "Hold and drag to move this card to another list 👉" },
+        {
+          title:
+            "Invite collaborators to your board by selecting the menu to the right of the notifications bell.",
+        },
+      ],
     },
     {
       cardItem: "doing",
@@ -21,6 +29,10 @@ export default function BoardBody() {
           ></path>
         </svg>
       ),
+      cards: [
+        { title: "This card has an attachment." },
+        { title: "This card has a label and a checklist." },
+      ],
     },
     {
       cardItem: "done",
@@ -32,22 +44,37 @@ export default function BoardBody() {
           ></path>
         </svg>
       ),
+      cards: [{ title: "Signed up for Trello" }],
     },
   ];
 
   const cardList = cardData.map((card) => (
-    <div key={card.cardItem} className="flex">
-      <div key={card.cardItem} className="">
-        {card.cardItem}
+    <div
+      key={card.cardItem}
+      className="flex flex-col w-1/5 bg-black justify-between px-3 py-4 rounded-lg mx-2"
+    >
+      <div className="flex items-center mb-4">
+        <div className="mr-2 text-white font-semibold">{card.cardItem}</div>
+        <div>{card.icon}</div>
       </div>
-      {card.icon}
+      <div className="flex flex-col space-y-2">
+        {card.cards.map((cardDetail, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 text-white rounded p-2 text-sm"
+          >
+            {cardDetail.title}
+          </div>
+        ))}
+      </div>
     </div>
   ));
 
   return (
     <div className="bg-[#004080] h-screen">
-      <div>
-        <div className="flex w-11/12 justify-between items-center mx-auto">
+      {/* card column container */}
+      <div className="">
+        <div className="flex h-[60vh] w-[95vw] justify-items-start items-start mx-auto pt-8">
           {cardList}
         </div>
       </div>

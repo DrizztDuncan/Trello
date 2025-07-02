@@ -1,3 +1,4 @@
+"use client";
 // import Image from "next/image";
 import { useState } from "react";
 import Header from "./components/Header";
@@ -7,14 +8,15 @@ import Sidebar from "./components/Sidebar";
 
 export default function Layout() {
 
-  const [expanded, setExpanded] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   
   return (
     <>
       <Header />
       <div className="flex">
-        <Sidebar />
-        <Board />
+      <Sidebar expanded={sidebarOpen} onToggle={() => setSidebarOpen((v) => !v)} />
+      <Board sidebarOpen={sidebarOpen} />
       </div>
     </>
   );

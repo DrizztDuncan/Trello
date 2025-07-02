@@ -74,7 +74,7 @@ export default function BoardBody() {
     <div className="bg-[#004080] h-screen">
       {/* card column container */}
       <div className="">
-        <div className="flex h-[60vh] w-[95vw] justify-items-start items-start mx-auto pt-8">
+        <div className="flex h-[60vh]  justify-items-start items-start mx-auto pt-8">
           {cardList}
         </div>
       </div>

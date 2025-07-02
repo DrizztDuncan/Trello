@@ -6,8 +6,11 @@ type SidebarProps = {
 export default function Sidebar({expanded, onToggle}: SidebarProps) {
 
   return (
-    <div className={`${expanded ? "w-48" : "w-4"} h-screen z-10 transition-all duration-300`}>
-      <button className="w-6 rounded-full border mx-1 my-2 bg-background" onClick={onToggle}>
+    <div className={`${expanded ? "w-48" : "w-4"} h-screen z-10 transition-all duration-300 relative`}>
+      <button
+        className="absolute top-2 -right-3 w-6 rounded-full border bg-background"
+        onClick={onToggle}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -23,7 +26,7 @@ export default function Sidebar({expanded, onToggle}: SidebarProps) {
           />
         </svg>
       </button>
-      <div className={expanded ? "block" : "hidden"}>SideBar</div>
+      <div className={expanded ? "block" : "hidden"} />
     </div>
   );
 }

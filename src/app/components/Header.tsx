@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="flex p-2 items-center justify-between shadow-md border-b border-gray-200">
       {/* Navbar titles */}
-      <nav className="flex w-5/12 justify-around">
+      <nav className="flex justify-around">
         <svg className="m-1 h-5 w-5 fill-[#9fadbc]">
           <path
             xmlns="http://www.w3.org/2000/svg"

@@ -125,8 +125,8 @@ export default function BoardHeader() {
   ];
   return (
     <nav className="bg-[#004da6e6]">
-      <div className="flex w-11/12 h-10 justify-between items-center mx-auto">
-        <div className="flex w-1/3 justify-around">
+      <div className="flex h-10 justify-between items-center mx-auto">
+        <div className="flex justify-around">
           {/* <div className="text-sky-50">Basic Board</div>
           <div>Template</div> */}
           {/* star */}

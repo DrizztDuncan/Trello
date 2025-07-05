@@ -30,3 +30,7 @@ src/
     images/
 
 ```
+
+## Resources
+### Icon
+* Arrow Icon: [Flaticon logo](https://www.flaticon.com/)
